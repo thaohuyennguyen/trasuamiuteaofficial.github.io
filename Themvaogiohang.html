@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="themvaogiohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="header" >
+            <div style="display: flex; justify-content: right;margin-top: 10px;">
+                <div  class="search">
+                    <form action="" id="search-box">
+                        <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
+                        <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
+                        <script>
+                            function searchProduct(){
+                                window.open("TimKiem.html", "_seft");
+                            }
+                        </script>
+                    </form>
+                </div>
+                <div id="login-btn">
+                    <input class="button-no-bg" type="button" onclick="login()" value="Đăng nhập">
+                    <script>
+                        function login(){
+                            window.open("Dangnhap.html","_self");
+                        }
+                    </script>
+                </div>
+                <div>
+                    <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
+                </div>
+            </div>
+                <a href="#" class="toggle-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <script>
+                    function showMenu()
+                    {
+                        const menu = document.getElementsByClassName('menu')[0];
+                        menu.classList.toggle('active');
+                    }
+                    const toggleButton = document.getElementsByClassName('toggle-btn')[0];
+                    toggleButton.addEventListener("click", showMenu);
+                    
+                </script>
+            <div class="navbar" >
+                <div class="logo">
+                    <a  href="index.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+                </div>
+                
+                <div class="topnav" id="myTopnav">
+               
+                    <a href="index.html">Trang chủ</a>
+                    <a href="Cuahang.html">Cửa hàng</a>
+                    <a href="Menuspbanchay.html">Thực đơn</a>
+                    <div class="dropdown">
+                        <button onclick="openTinTucvaUuDai()" class="dropbtn">Tin tức & Ưu đãi
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <script>
+                            function openTinTucvaUuDai(){
+                                window.open("tintucvauudai.html","_self");
+                            }
+                          </script>
+                      <div class="dropdown-content">
+                        <a href="tintuc.html">Tin tức & Sự kiện</a>
+                        <a href="uudai.html">Khuyến mãi</a>
+                      </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button onclick="openLienhe()" class="dropbtn">Liên hệ
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <script>
+                            function openLienhe(){
+                                window.open("LienHe.html","_self");
+                            }
+                          </script>
+                      <div class="dropdown-content">
+                        <a href="Gopy.html">Góp ý</a>
+                        <a href="LienHe.html">Hợp tác</a>
+                      </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="dropbtn">Về chúng tôi
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                      <div class="dropdown-content">
+                        <a href="KhoiNguon.html">Khởi nguồn</a>
+                        <a href="tuyendung.html">Tuyển dụng</a>
+                        <a href="thanhvien.html">Thành viên</a>
+                      </div>
+                     
+                    </div> 
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                  </div>
+                  <script>
+                    function myFunction() {
+                      var x = document.getElementById("myTopnav");
+                      if (x.className === "topnav") {
+                        x.className += " responsive";
+                      } else {
+                        x.className = "topnav";
+                      }
+                    }
+                    </script>
+            </div>
+            
+        </div >
+        <div class="product">
+            <div id="top">
+                <div id="hinh">
+                    <img id="img" src="Image/sourcesp/Fresh Fruit Tea/Hồng trà bưởi mật ong.png" >
+                </div>
+                <div id="thongtin">
+                    <h4 id="name">Hồng trà bưởi mật ong</h4>
+                    <p id="price">30.000đ</p>
+                    <form>
+                       <input type="button" id="des" name="btngiam" value="-" style="background-color: #EAAA75;" >
+                       <input type="text" id="count" name="txtsoluong" value="1" size="2">
+                       <input type="button" id="inc" name="btngiam" value="+"  style="background-color: #EAAA75;">
+                       <br>
+                       <div  id="add-btn" style=" border: 1px solid #EAAA75 ;
+                       background-color: #FDEEDF;
+                       display: inline-block;
+                       margin-top: 20px;
+                      
+                       width: 11;">Thêm vào giỏ hàng</div>
+                    </form>
+        
+                </div>
+            </div>
+            
+            <hr>
+            <div>
+                <table>
+                    <tr>
+                        <td colspan="2">Chọn đường (+0đ)</td>
+                    </tr>
+                    <tr>
+                        <form>
+                            <td>
+                            <input type="radio" name="supc"  width="30px">30%
+                            </td>
+                            <td><input type="radio" name="supc" value="50%">50%</td>
+                            <td><input type="radio" name="supc" value="70%">70%</td>
+                            <td><input type="radio" name="supc" value="100%">100%</td>
+                        </form>
+                    </tr>
+                    <tr>
+                      <td colspan="2"> Chọn đá (+0đ)</td>
+                    </tr>
+                    <tr>
+                        <form>
+    
+                            <td width="25%" ><input type="radio" name="icepc" value="30%">30%</td>
+                            <td width="25%" > <input type="radio" name="icepc" value="50%">50%</td>
+                            <td width="25%"><input type="radio" name="icepc" value="70%">70%</td>
+                            <td width="25%"><input type="radio" name="icepc" value="100%">100%</td>
+                        </form>
+                    </tr>
+                    <tr><td colspan="2">Chọn Topping</td></tr>
+                        <form>
+    
+                            <tr>
+                                <td colspan="2"><input name="topping" value="Trân châu đen:7000" type="checkbox">Trân châu đen</td>
+                                <td colspan="4">+7000đ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"> <input name="topping" value="Trân châu trắng:7000" type="checkbox">Trân châu trắng</td>
+                                <td colspan="4">+7000đ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input name="topping" value="pudding trứng:8000" type="checkbox">Pudding trứng</td>
+                                <td colspan="4">+8000đ</td>
+                            </tr>
+                    <tr>
+                        <td colspan="2"><input name="topping" value="pudding socola:8000" type="checkbox"> Pudding socola</td>
+                        <td colspan="4">+8000đ</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input name="topping" value="pudding khoai môn:8000" type="checkbox"> Pudding khoai môn</td>
+                        <td colspan="4">+8000đ</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input name="topping" value="trân châu phô mai:8000" type="checkbox"> Trân châu phô mai</td>
+                        <td colspan="4">+8000đ</td>
+                    </tr>
+                </form>
+                </table>
+            </div>
+            
+        </div>
+        <footer>
+            <div class="row"  >
+                <div class="col">
+                    <a href="index.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
+                <div class="col">
+                    <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
+                        <a href="KhoiNguon.html"><p>Khởi nguồn</p> </a>
+                        <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
+                </div>
+                <div class="col">
+                    <h3><a href="LienHe.html">Liên hệ </a></h3>
+                        <a href="Gopy.html"><p>Góp ý</p> </a>
+                        <a href="LienHe.html"><p>Hợp tác</p> </a>
+                </div>
+                <div class="col3">
+                    <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
+                    <a href="#"><img class="icon" src="Image/social/igic.png"></a>
+                    <a href="#"><img class="icon" src="Image/social/twitteric.png"></a>
+                    <a href="#"><img class="icon" src="Image/social/ytbic.png"></a> 
+                    <p><a href="#"><img class="icon" src="Image/social/mailic.png"></a>info@miutea.com.vn</p>
+    
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+    
+    
+</body>
+<script src="./themvaogiohang.js"></script>
+</html>

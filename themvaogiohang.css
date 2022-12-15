@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Fahwang;
+    src: url(font/Fahkwang-Regular.ttf);
+}
+@font-face {
+    font-family: Fahwang-SemiBold;
+    src: url(font/Fahkwang-SemiBold.ttf);
+}
+@font-face {
+    font-family: Fahwang-Bold;
+    src: url(font/Fahkwang-Bold.ttf);
+}
+div.product{
+    font-family: Fahwang;
+    max-width:400px;
+  margin: 60px auto;
+  border: 1px solid #000000;
+ 
+}
+div.body{
+    padding: 10px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+#hinh{
+    flex-basis:40%;
+}
+#thongtin{
+    padding: 10px;
+    flex-basis: 60%;
+}
+#top{
+    display: flex;
+}
+#thongtin #btn-add{
+    border: 1px solid #EAAA75 ;
+    background-color: #FDEEDF;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 11;
+
+}
+@media only screen and (max-width: 46.1875em){
+    div.product{
+        width: 80%;
+    }
+}
+@media only screen and (min-width:46.25em) and (max-width:63.9375em ){
+
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
+    <title>Thành viên</title>
+    <link rel="stylesheet" href="thanhvien.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* search bar */
+#search-box{
+    background: #fff;
+    border-radius: 30px;
+}
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 12px;
+    width: 150px;
+    padding: 0 5px;
+    transition: 0.5s ease-in-out;
+}
+#search-box:hover #search-text, #search-box #search-text:valid{
+    width: 150px;
+    padding: 0 10px;
+}
+#search-box #search-button {
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 15px;
+}
+    </style>
+   
+</head>
+<body style="background-image:url('Image/banner/background.png');">
+    <div class="container">
+        <!-- Header -->
+        <div class="header" >
+            <div style="display: flex; justify-content: right;margin-top: 10px;">
+                <div  class="search">
+                    <form action="" id="search-box">
+                        <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
+                        <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
+                        <script>
+                            function searchProduct(){
+                                window.open("TimKiem.html", "_seft");
+                            }
+                        </script>
+                    </form>
+                </div>
+                <div id="login-btn">
+                    <input class="button-no-bg" type="button" onclick="login()" value="Đăng nhập">
+                    <script>
+                        function login(){
+                            window.open("Dangnhap.html","_self");
+                        }
+                    </script>
+                </div>
+                <div>
+                    <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
+                </div>
+            </div>
+                <a href="#" class="toggle-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <script>
+                    function showMenu()
+                    {
+                        const menu = document.getElementsByClassName('menu')[0];
+                        menu.classList.toggle('active');
+                    }
+                    const toggleButton = document.getElementsByClassName('toggle-btn')[0];
+                    toggleButton.addEventListener("click", showMenu);
+                    
+                </script>
+            <div class="navbar" >
+                <div class="logo">
+                    <a  href="index.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+                </div>
+                
+                <div class="topnav" id="myTopnav">
+               
+                    <a href="index.html">Trang chủ</a>
+                    <a href="Cuahang.html">Cửa hàng</a>
+                    <a href="Menuspbanchay.html">Thực đơn</a>
+                    <div class="dropdown">
+                        <button onclick="openTinTucvaUuDai()" class="dropbtn">Tin tức & Ưu đãi
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <script>
+                            function openTinTucvaUuDai(){
+                                window.open("tintucvauudai.html","_self");
+                            }
+                          </script>
+                      <div class="dropdown-content">
+                        <a href="tintuc.html">Tin tức & Sự kiện</a>
+                        <a href="uudai.html">Khuyến mãi</a>
+                      </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button onclick="openLienhe()" class="dropbtn">Liên hệ
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <script>
+                            function openLienhe(){
+                                window.open("LienHe.html","_self");
+                            }
+                          </script>
+                      <div class="dropdown-content">
+                        <a href="Gopy.html">Góp ý</a>
+                        <a href="LienHe.html">Hợp tác</a>
+                      </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="dropbtn">Về chúng tôi
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                      <div class="dropdown-content">
+                        <a href="KhoiNguon.html">Khởi nguồn</a>
+                        <a href="tuyendung.html">Tuyển dụng</a>
+                        <a href="thanhvien.html">Thành viên</a>
+                      </div>
+                     
+                    </div> 
+                    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                  </div>
+                  <script>
+                    function myFunction() {
+                      var x = document.getElementById("myTopnav");
+                      if (x.className === "topnav") {
+                        x.className += " responsive";
+                      } else {
+                        x.className = "topnav";
+                      }
+                    }
+                    </script>
+            </div>
+            
+        </div >
+       <!-- content --> 
+            <div class="content">
+               <!-- Thành viên -->
+               <center class="CtTitle">
+                <img src="Image/thanhvien/banner_uudaithanhvien.png" alt="Banner ưu đãi thành viên" style="width:100% ;">
+                <div class="title">ĐIỀU KHOẢN VÀ ĐIỀU KIỆN</div>
+               </center>
+               <div class="title1">
+                <div class="sub_title">Chính sách thành viên mới</div>
+                <div class="text">
+                    <ul>
+                        <li>Tích điểm trên mọi giao dịch bắt đầu từ ngày 01/11/2022</li>
+                        <li>Tích lũy đủ 100 điểm được tặng 1 ly Miễn Phí</li>
+                        <li>Nhận Voucher 50% ngay khi đăng ký thành viên</li>
+                    </ul>
+                </div>
+               </div>
+
+               <div class="title1">
+                <div class="sub_title" style="padding-top: 30px;">Tích lũy điểm đổi quà</div>
+                <div class="sub_title1">Có tất cả 2 loại điểm:</div>
+                <div class="text">
+                    <ul>
+                        <li>Điểm khả dụng (Điểm đổi quà): dùng để đổi điểm lấy quà</li>
+                        <li>Điểm tích lũy: dùng để xét hạng mức thẻ (Diamond, VIP, Member)</li>
+                    </ul>      
+                </div>
+                <div class="sub_title1">Tỷ lệ quy đổi điểm khả dụng và điểm tích lũy: 10.000 đồng = 1 điểm</div>
+               </div>
+        <div class="hangthetv">
+               <center>
+                <div class="title" style="padding-bottom:0px ;">CÁC HẠNG THẺ THÀNH VIÊN</div>
+               </center>
+            <div class="box-cha">
+                <div class="box-con">
+                   <img class="img_hangthe" src="Image/thanhvien/thanhvienmoi.png">
+                    <div  class="title">Thành viên mới</div>
+                    <div  class="content">
+                        <ul>
+                            <li>Mỗi 100 điểm khả dụng sẽ đổi được 1 ly nước miễn phí tùy chọn size vừa (M)</li>
+                            <li>Nhận bánh sinh nhật khi tới ngày sinh nhật của bạn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-con">
+                    <img class="img_hangthe" src="Image/thanhvien/thanhviendong.png">
+                    <div  class="title">Hạng đồng</div>
+                    <div  class="content">
+                        <ul>
+                            <li>Mỗi 100 điểm khả dụng sẽ đổi được 1 ly nước miễn phí tùy chọn size vừa (M)</li>
+                            <li>Nhận bánh sinh nhật khi tới ngày sinh nhật của bạn</li>
+                            <li>Giảm giá 10% thức uống, bánh và 3% với sản phẩm khác </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-con">
+                    <img class="img_hangthe" src="Image/thanhvien/thanhvienbac.png">
+                    <div  class="title">Hạng bạc</div>
+                    <div  class="content">
+                        <ul>
+                            <li>Mỗi 100 điểm khả dụng sẽ đổi được 1 ly nước miễn phí tùy chọn size vừa (M)</li>
+                            <li>Nhận bánh sinh nhật khi tới ngày sinh nhật của bạn</li>
+                            <li>Giảm giá 15% thức uống, bánh và 5% với sản phẩm khác </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          <div><a href="Dangkythanhvien.html" class="button" id="button"> ĐĂNG KÝ THÀNH VIÊN</a></div>
+        </div>
+
+
+
+</div>
+
+       
+       
+        <!-- footer -->
+        <footer>
+            <div class="row"  >
+                <div class="col">
+                    <a href="index.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
+                <div class="col">
+                    <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
+                        <a href="KhoiNguon.html"><p>Khởi nguồn</p> </a>
+                        <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
+                </div>
+                <div class="col">
+                    <h3><a href="LienHe.html">Liên hệ </a></h3>
+                        <a href="Gopy.html"><p>Góp ý</p> </a>
+                        <a href="LienHe.html"><p>Hợp tác</p> </a>
+                </div>
+                <div class="col3">
+                    <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
+                    <a href="#"><img class="icon" src="Image/social/igic.png"></a>
+                    <a href="#"><img class="icon" src="Image/social/twitteric.png"></a>
+                    <a href="#"><img class="icon" src="Image/social/ytbic.png"></a> 
+                    <p><a href="#"><img class="icon" src="Image/social/mailic.png"></a>info@miutea.com.vn</p>
+    
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+    <script language="JavaScript">
+    
+        var Submit = document.getElementById("button");
+      Submit.onclick = function(){
+
+        window.location ="Dangkythanhvien.html";
+      }
+    </script>  
+</body>
+</html>

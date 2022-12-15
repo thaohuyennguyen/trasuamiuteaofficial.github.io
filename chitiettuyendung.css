@@ -1,0 +1,76 @@
+/* td.spaceRight {
+    padding-right: 7em;
+  } */
+
+.box{
+  width:100%;
+  display: flex;
+  margin-left:20px ;
+  
+}
+.box-con{
+  display: block;
+  width: calc(100% / 4 - 10px);
+}
+
+
+@media only screen and (max-width: 46.1875em){ 
+
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+   
+}
+.box-con{
+  display: block;
+    width: 400px;
+    margin: 0 auto;
+    object-fit: fill;
+}
+.img{
+  width: 500px;
+  object-fit: cover;
+  margin: 0 50px;
+}
+
+.hide {
+  display: none;
+}
+.info {
+  font-size: 16px;
+  margin-left: 50px;
+}
+.tuyendungh1 {
+    font-size: 20px;
+}
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+       
+   }
+.box-con{
+    display: flex;
+    width: 700px;
+    margin: 10px 50px;
+    object-fit: fill;
+    
+    
+  }
+
+.info {
+  margin-left: 20px;
+}
+/* .img{
+    width: 500px;
+    object-fit: cover;
+    margin: 10px 0;
+  } */
+  
+   
+}
+

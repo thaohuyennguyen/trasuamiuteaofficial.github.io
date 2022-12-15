@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
+  <title>Góp ý</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="lienhe.css">
+    
+  <style>
+
+      #floating-phone { display: none; position: fixed; left: 10px; bottom: 10px; height: 50px; width: 50px; background: #46C11E url(https://callnowbutton.com/phone/callbutton01.png) center / 30px no-repeat; z-index: 99; color: #FFF; font-size: 35px; line-height: 55px; text-align: center; border-radius: 50%; -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5); -moz-box-shadow: 0 2px 5px rgba(0,0,0,.5); box-shadow: 0 2px 5px rgba(0,0,0,.5); }
+      
+      @media (max-width: 650px) { #floating-phone { display: block; } }
+      #btn_Reset{
+    background-color: rgb(237, 177, 98);
+    padding: 5px; 
+    border-radius: 15px; 
+    margin-top: 30px; 
+    margin-left: 10px; 
+    border: 1px solid rgb(237, 177, 98);
+  }
+  #btn_Submit{
+    padding: 5px; border-radius: 15px;
+    background-color: rgb(237, 177, 98); 
+    margin-top: 30px; margin-left: 20px; 
+    border: 1px solid antiquewhite; 
+    width: 70px;
+
+  }
+      #btn_Submit:hover{
+        transform:  scaleX(1.02);
+        background-color: #34281f;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        color: #ffffff;
+
+      }
+
+      #btn_Reset:hover{
+        transform:  scaleX(1.02);
+        background-color: #34281f;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        color: #ffffff;
+      }
+      #myTable td tr{
+        font-family: url('font/Fahkwang-Bold.ttf');
+      }
+      
+  </style>
+</head>
+  
+    <body class="content" style="background-image:url('Image/banner/background.png');">
+
+      <div class="header" >
+        <div style="display: flex; justify-content: right;margin-top: 10px;">
+            <div  class="search">
+                <form action="" id="search-box">
+                    <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
+                    <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
+                    <script>
+                        function searchProduct(){
+                            window.open("TimKiem.html", "_seft");
+                        }
+                    </script>
+                </form>
+            </div>
+            <div id="login-btn">
+                <input class="button-no-bg" type="button" onclick="login()" value="Đăng nhập">
+                <script>
+                    function login(){
+                        window.open("Dangnhap.html","_self");
+                    }
+                </script>
+            </div>
+            <div>
+                <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
+            </div>
+        </div>
+            <a href="#" class="toggle-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <script>
+                function showMenu()
+                {
+                    const menu = document.getElementsByClassName('menu')[0];
+                    menu.classList.toggle('active');
+                }
+                const toggleButton = document.getElementsByClassName('toggle-btn')[0];
+                toggleButton.addEventListener("click", showMenu);
+                
+            </script>
+        <div class="navbar" >
+            <div class="logo">
+                <a  href="index.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+            </div>
+            
+            <div class="topnav" id="myTopnav">
+           
+                <a href="index.html">Trang chủ</a>
+                <a href="Cuahang.html">Cửa hàng</a>
+                <a href="Menuspbanchay.html">Thực đơn</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Tin tức & Ưu đãi
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="tintuc.html">Tin tức & Sự kiện</a>
+                    <a href="uudai.html">Khuyến mãi</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Liên hệ
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="Gopy.html">Góp ý</a>
+                    <a href="LienHe.html">Hợp tác</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Về chúng tôi
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="KhoiNguon.html">Khởi nguồn</a>
+                    <a href="tuyendung.html">Tuyển dụng</a>
+                    <a href="thanhvien.html">Thành viên</a>
+                  </div>
+                 
+                </div> 
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+        </div>
+        
+    </div >
+
+      <div>
+        <img class="hinh" src="Image/VeChungToi/lienhe.png" 
+                    title="HỢP TÁC VỚI CHÚNG TÔI" />
+                    <h1 class="text">GÓP Ý VỚI CHÚNG TÔI</h1>
+        <h1 class="lienhe" style="text-align: center;font-family: url('font/Fahkwang-Bold.ttf'); padding: 20px;">GÓP Ý</h1>
+        <div id="gopy" style="height: 1000px;">
+          <!-- <p style="text-align: left;" class="info">
+            Tên chính thức: CÔNG TY CỔ PHẦN ABC <br/>
+            Trụ sở chính: 669 QL1A, khu phố 3, Thủ Đức, TP Hồ Chí Minh <br/>
+            Mã số thuế/GPKD: 12345678 <br/>
+            Người đại diện theo pháp luật: Ông ABC <br/>
+            Điện thoại: 0312345678 <br/>
+            Email: abcmilktea@gmail.com
+        </p> -->
+        <center>
+          <form action="#" id="myForm">
+            <table id="myTable" style="display: block;box-shadow: 5px 5px 5px #AAA; height: 400px;width: 350px; border:2px solid #0000; border-radius: 10px; background-color: antiquewhite;">
+              <tr>
+                <td style="padding: 5px;">Họ tên(*):</td>
+                <td style="padding: 5px; padding-top: 20px;"><input type="text" id="Name" placeholder="Họ và tên"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Email:</td>
+                <td style="padding: 5px;"><input type="email" id="Email" placeholder="Email"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Điện thoại(*):</td>
+                <td style="padding: 5px;"><input type="text" id="PhoneNumber" placeholder="Số điện thoại"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Địa chỉ:</td>
+                <td style="padding: 5px;"><input type="text" id="Address" placeholder="Địa chỉ"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Nội dung góp ý(*):</td>
+                <td style="padding: 5px;"><input style="height: 100px;" type="text" id="Content"></td>
+              </tr>
+              <tr> <td colspan="2" style="text-align: center;"><input type="button" value="Gửi" id="btn_Submit">
+                <input type="button" value="Làm mới" id="btn_Reset"></td>
+              </tr>
+              
+            </table>
+  
+  
+        </form>
+        </center>
+        
+        </div>
+        
+      </div>
+        
+        <div class="hotline-phone-ring-wrap">
+            <div class="hotline-phone-ring">
+                <div class="hotline-phone-ring-circle"></div>
+                <div class="hotline-phone-ring-circle-fill"></div>
+                <div class="hotline-phone-ring-img-circle">
+                <a href="tel:1800 1000" class="pps-btn-img">
+                    <img src="https://nocodebuilding.com/wp-content/uploads/2020/07/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+                </a>
+                </div>
+            </div>
+            <div class="hotline-bar">
+                <a href="tel:1800 1000">
+                    <span class="text-hotline">1800 1000</span>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+        <footer>
+          <div class="row"  >
+              <div class="col">
+                  <a href="index.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
+              <div class="col1">
+                  <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
+                      <a href="KhoiNguon.html"><p>Khởi nguồn</p> </a>
+                      <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
+              </div>
+              <div class="col2">
+                  <a href="LienHe.html"><h3>Liên hệ</h3> </a>
+                      <a href="Gopy.html"><p>Góp ý</p> </a>
+                      <a href="LienHe.html"><p>Hợp tác</p> </a>
+              </div>
+              <div class="col3">
+                  <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
+                  <a href="#"><img class="icon" src="Image/social/igic.png"></a>
+                  <a href="#"><img class="icon" src="Image/social/twitteric.png"></a>
+                  <a href="#"><img class="icon" src="Image/social/ytbic.png"></a> 
+                  <p><a href="#"><img class="icon" src="Image/social/mailic.png"></a>info@miutea.com.vn</p>
+  
+              </div>
+          </div>
+          
+      </footer>
+        
+        <script>
+          var Name = document.getElementById('Name');
+          var PhoneNumber = document.getElementById('PhoneNumber');
+          var Email = document.getElementById('Email');
+          var Address = document.getElementById('Address');
+          var Content = document.getElementById('Content');
+          var Submit = document.getElementById('btn_Submit');
+          var Reset = document.getElementById('btn_Reset');
+         
+          Reset.onclick = function(){
+       
+          Name.value ="";
+          PhoneNumber.value ="";
+          Email.value='';
+          Address.value='';
+          Content.value ="";
+
+        } 
+        Submit.onclick = function(){
+          if(!Name.value){
+            alert("Hãy nhập tên của bạn!")
+            Name.value ="";
+            Name.focus();
+          }
+          else if(!PhoneNumber.value){
+            alert("Hãy nhập số điện thoại của bạn!")
+            PhoneNumber.value ="";
+            PhoneNumber.focus();
+          }
+          else if(!Content.value){
+            alert("Hãy nhập nội dung góp ý của bạn!")
+            Content.value ="";
+            Content.focus();
+          }
+       
+       else{
+        alert("Góp ý của bạn đã được MiuTea ghi nhận. Chúng tôi sẽ phản hồi lại sớm nhất có thể. Cảm ơn bạn!")
+        Name.value ="";
+       PhoneNumber.value ="";
+       Email.value='';
+       Address.value='';
+       Content.value ="";
+        }
+     } 
+
+
+
+        </script>
+        
+    </body>
+</html>

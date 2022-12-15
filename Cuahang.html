@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
+    <title>Cửa hàng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style type="text/css">
+            
+        p{
+            width: 50%;
+            margin-top: 10pt;
+            margin-left: 10pt;
+            float: center;
+        }
+        strong
+            {
+                color: black;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        #cuahang{
+            background-color:#FFFAF5 ;
+            color: black;
+            max-width: 1000px;
+            max-height: 500px;
+        }
+        
+        </style>
+
+</head>
+<body style="background-image:url('Image/banner/background.png');">
+<div class="content">
+    <div class="header" >
+        <div style="display: flex; justify-content: right;margin-top: 10px;">
+            <div  class="search">
+                <form action="" id="search-box">
+                    <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
+                    <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
+                    <script>
+                        function searchProduct(){
+                            window.open("TimKiem.html", "_seft");
+                        }
+                    </script>
+                </form>
+            </div>
+            <div id="login-btn">
+                <input class="button-no-bg" type="button" onclick="login()" value="Đăng nhập">
+                <script>
+                    function login(){
+                        window.open("Dangnhap.html","_self");
+                    }
+                </script>
+            </div>
+            <div>
+                <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
+            </div>
+        </div>
+            <a href="#" class="toggle-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <script>
+                function showMenu()
+                {
+                    const menu = document.getElementsByClassName('menu')[0];
+                    menu.classList.toggle('active');
+                }
+                const toggleButton = document.getElementsByClassName('toggle-btn')[0];
+                toggleButton.addEventListener("click", showMenu);
+                
+            </script>
+        <div class="navbar" >
+            <div class="logo">
+                <a  href="index.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+            </div>
+            
+            <div class="topnav" id="myTopnav">
+           
+                <a href="index.html">Trang chủ</a>
+                <a href="Cuahang.html">Cửa hàng</a>
+                <a href="Menuspbanchay.html">Thực đơn</a>
+                <div class="dropdown">
+                    <button onclick="openTinTucvaUuDai()" class="dropbtn">Tin tức & Ưu đãi
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <script>
+                        function openTinTucvaUuDai(){
+                            window.open("tintucvauudai.html","_self");
+                        }
+                      </script>
+                  <div class="dropdown-content">
+                    <a href="tintuc.html">Tin tức & Sự kiện</a>
+                    <a href="uudai.html">Khuyến mãi</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button onclick="openLienhe()" class="dropbtn">Liên hệ
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <script>
+                        function openLienhe(){
+                            window.open("LienHe.html","_self");
+                        }
+                      </script>
+                  <div class="dropdown-content">
+                    <a href="Gopy.html">Góp ý</a>
+                    <a href="LienHe.html">Hợp tác</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Về chúng tôi
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="KhoiNguon.html">Khởi nguồn</a>
+                    <a href="tuyendung.html">Tuyển dụng</a>
+                    <a href="thanhvien.html">Thành viên</a>
+                  </div>
+                 
+                </div> 
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
+        </div>
+        
+    </div >
+    <div class="center">
+        <center><div class="slider">
+            <img src="Image/banner/bannerTinTuc/banner_store.png">
+            </div> <br><br>
+        <h1>HỆ THỐNG CỬA HÀNG CỦA MIUTEA</h1>
+        <div class="slider">
+            <p id="cuahang"> <strong>Trường Đại học Kinh tế - Luật</strong><br>Địa chỉ: 669 QL1A, Khu phố 3, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh<br>
+                Giờ mở cửa: 10:00 - 21:30<br> Số điện thoại: (028) 123 456 71</p> <br>
+                <hr width="60%">
+            <p id="cuahang"> <strong>Vincom Thủ Đức</strong><br>Địa chỉ: 216 Võ Văn Ngân, Phường Bình Thọ, TP. Thủ Đức, TP. Hồ Chí Minh<br>
+                Giờ mở cửa: 10:00 - 21:30<br> Số điện thoại: (028) 123 456 72</p> <br>
+                <hr width="60%">
+            <p id="cuahang"> <strong>Trường Đại học Ngân hàng</strong><br>Địa chỉ: 56 Hoàng Diệu 2, Phường Linh Chiểu, TP. Thủ Đức, TP. Hồ Chí Minh<br>
+                Giờ mở cửa: 10:00 - 21:30<br> Số điện thoại: (028) 123 456 73</p> <br>
+                <hr width="60%">  
+            <p id="cuahang"> <strong>Vincom Lê Văn Việt</strong><br>Địa chỉ: 50 Lê Văn Việt, Phường Hiệp Phú, TP. Thủ Đức, TP. Hồ Chí Minh<br>
+                Giờ mở cửa: 10:00 - 21:30<br> Số điện thoại: (028) 123 456 74</p> <br>
+                <hr width="60%"> 
+            <p id="cuahang"> <strong>Trường Đại học Bách khoa</strong><br>Địa chỉ: Đông Hòa, Dĩ An, Tỉnh Bình Dương<br>
+                Giờ mở cửa: 10:00 - 21:30<br> Số điện thoại: (028) 123 456 75</p> <br>     
+        </div>
+    </center>
+    </div> 
+    
+    <footer>
+        <div class="row"  >
+            <div class="col">
+                <a href="index.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
+            <div class="col">
+                <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
+                    <a href="KhoiNguon.html">Khởi nguồn</a><br>
+                    <a href="quanlycuahang.html">Quy định chung</a>
+            </div>
+            <div class="col">
+                <h3><a href="LienHe.html">Liên hệ </a></h3>
+                    <a href="LienHe.html">Góp ý</a><br>
+                    <a href="LienHe.html">Hợp tác</a>
+            </div>
+            <div class="col3">
+                <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
+                <a href="#"><img class="icon" src="Image/social/igic.png"></a>
+                <a href="#"><img class="icon" src="Image/social/twitteric.png"></a>
+                <a href="#"><img class="icon" src="Image/social/ytbic.png"></a><br> 
+                <a href="#"><img class="icon" src="Image/social/mailic.png"></a>info@miutea.com.vn
+
+            </div>
+        </div>
+        
+    </footer>
+</body>
+</html>
